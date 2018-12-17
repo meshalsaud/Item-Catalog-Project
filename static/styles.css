@@ -1,0 +1,43 @@
+.header{
+	border:solid 2px black;
+	padding: 10px;
+	text-align: center;
+}
+
+ button{
+	color:black;
+	float: right;
+	padding: 10px;
+	border-radius: 120px 
+}
+
+.main{
+	display:flex
+}
+
+.category{
+	margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 53px;
+    border-right: solid;
+    padding: 10px;
+}
+.descr{
+	border: solid 2px #000;
+	padding: 10px;
+	text-align:center;
+}
+.category >h3{
+	background-color: #ffeb3b;
+	
+}
+.flash{
+	color:green;
+	text-align: left;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	background-color: #888888;
+}

@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+	<div class='header'>
+			<div>Books Catalog appliction</div>
+			<a href="{{url_for('gdisconnect')}}"><button>Logout</button>
+			</a>
+
+	</div>
+	<div class='descr'>
+	<h1>Edit Book</h1>
+	<form action="{{url_for('editBook',category_id=category_id,book_id=book.id)}}" method="POST">
+		<p>Name:</p>
+		<input type='text' name='name' placeholder='{{book.name}}'><br>
+		<p>Descritipn</p>
+		<input type='text' name='description' placeholder='{{book.description}}'><br>
+		<p>Rating</p>
+		<input type='number' name='rating' min='1',max='5'><br>
+
+		<input type='submit' value='Edit'>
+	</form>
+	<a href="{{url_for('booksMenu',category_id=category_id)}}">Cancel</a>
+	</div>
+	</body>
+</body>
+</html>

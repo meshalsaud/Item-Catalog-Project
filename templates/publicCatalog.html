@@ -1,0 +1,36 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+	<div class='header'>
+			<div><a href="{{url_for('catalog')}}">Books Catalog appliction</a></div>
+			<a href="{{url_for('showLogin')}}"><button>Login</button>
+				</a>
+
+	</div>
+	<div class='main'>
+		<div class='category'>
+			<h1>Categories</h1>
+			{%for i in categories%}
+
+			<h3><a href="{{url_for('booksMenu',category_id=i.id)}}">{{i.name}} </a> 
+			
+			</h3>
+
+			{%endfor%}
+		</div>
+		<div class='book'>
+			<h1>Latest book</h1>
+			   {%for book in books%}
+			   <p><a href="{{url_for('showBook',category_id=book.category_id,book_id=book.id)}}">
+		   	{{book.name}} ({{book.categories.name}})
+		  		</a></p>
+			   {%endfor%}
+
+		</div>
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+	<div class='header'>
+			<div>Books Catalog appliction</div>
+			<a href="{{url_for('gdisconnect')}}"><button>Logout</button>
+			</a>
+	</div>
+	<div class='descr'>
+	<h1>Are you sure do want delete {{book.name}}</h1>
+	<form action="{{url_for('deleteBook',category_id=category_id,book_id=book.id)}}" method='POST'>
+		<input type='submit' , value='Delete'>
+	</form>
+	<a href="{{url_for('booksMenu',category_id=category_id)}}">Cancel</a>
+
+	</div>
+	</body>
+</html>

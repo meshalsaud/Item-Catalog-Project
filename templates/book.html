@@ -1,0 +1,37 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+	<div class='header'>
+			<div><a href="{{url_for('catalog')}}">Books Catalog appliction</a></div>
+			<a href="{{url_for('gdisconnect')}}"><button>Logout</button>
+			</a>
+			<div class='flash'>
+				{% with messages=get_flashed_messages() %}
+				{% if messages %}
+				<ul>
+					{% for message in messages %}
+
+					<li><strong>{{message}}</strong></li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			{% endwith %}
+	</div>
+
+	</div>
+	<div class='descr'>
+	<h1>{{books.name}}</h1>
+	<p>
+		<h2>
+			<a href="{{url_for('booksMenu',category_id=categories.id)}}">{{categories.name}}</a>
+		</h2>
+		<p>{{books.description}}</p>
+	</p>
+
+	<a href="{{url_for('editBook',category_id=categories.id,book_id=books.id)}}">Edit</a>
+	<a href="{{url_for('deleteBook',category_id=categories.id,book_id=books.id)}}">Delete</a>
+</div>
+</body>
+</html>
