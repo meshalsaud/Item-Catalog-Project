@@ -1,5 +1,5 @@
 # Item Catalog Project
-- This project is part of Udacity full stack nanodegree, we used vagrant & flask & qlite 
+- This project is part of Udacity full stack nanodegree, we used vagrant & flask & sqlite 
 
 ## what you need before start?
 1. [Virtualbox](https://www.virtualbox.org/)
